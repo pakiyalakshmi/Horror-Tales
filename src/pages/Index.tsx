@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { Star, Mail } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 const stories = [
   {
@@ -66,6 +67,7 @@ const stories = [
 const Index = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [selectedStory, setSelectedStory] = useState(null);
   const { toast } = useToast();
 
   const handleContact = (e: React.FormEvent) => {
@@ -97,7 +99,7 @@ const Index = () => {
       {/* Stories Section */}
       <section className="py-20 container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12">Featured Stories</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {stories.map((story) => (
             <Card key={story.id} className="hover:shadow-lg transition-shadow">
               <CardHeader>
@@ -113,12 +115,39 @@ const Index = () => {
                   <span>{story.rating}</span>
                   <span className="text-sm text-muted-foreground">({story.reviews})</span>
                 </div>
-                <Button variant="outline" size="sm">Read More</Button>
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  onClick={() => setSelectedStory(story)}
+                >
+                  Read More
+                </Button>
               </CardFooter>
             </Card>
           ))}
         </div>
       </section>
+
+      {/* Story Dialog */}
+      <Dialog open={!!selectedStory} onOpenChange={() => setSelectedStory(null)}>
+        <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold mb-4">
+              {selectedStory?.title}
+            </DialogTitle>
+          </DialogHeader>
+          <div className="prose prose-invert max-w-none">
+            <img 
+              src={selectedStory?.image} 
+              alt={selectedStory?.title} 
+              className="w-full h-64 object-cover rounded-lg mb-6"
+            />
+            <p className="whitespace-pre-line text-lg">
+              {selectedStory?.content}
+            </p>
+          </div>
+        </DialogContent>
+      </Dialog>
 
       {/* Contact Section */}
       <section className="py-20 bg-muted">
