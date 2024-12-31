@@ -35,9 +35,25 @@ const stories = [
     id: 4,
     title: "Endless Loop in the Desert",
     excerpt: "A man's nightmare becomes an infinite cycle of horror...",
-    image: "https://designerapp.officeapps.live.com/designerapp/document.ashx?path=/0e98d7cb-0ffd-462d-88e8-8285a041b7b8/DallEGeneratedImages/dalle-b6b7cea1-2627-4805-a841-2f016ff7690c0251685071212913652900.jpg",
+    image: "https://www.kidsgen.com/stories/horror-stories/short-stories/images/endless-loop.jpg",
     rating: 4.2,
     reviews: 145
+  },
+  {
+    id: 5,
+    title: "Her Old Piano",
+    excerpt: "A mysterious piano holds a dark and bloody secret...",
+    image: "https://static2.bigstockphoto.com/7/0/2/large1500/207986107.jpg",
+    rating: 4.4,
+    reviews: 198
+  },
+  {
+    id: 6,
+    title: "I'm Behind You... Turn Around...",
+    excerpt: "A night alone turns into a terrifying game of cat and mouse...",
+    image: "http://thegirlwholoveshorror.blogspot.com/2011/10/movie-review-ward-2011.html",
+    rating: 4.6,
+    reviews: 223
   }
 ];
 
