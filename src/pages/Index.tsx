@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
-import { Star, Mail, Send } from "lucide-react";
+import { Star, Mail } from "lucide-react";
 
 const stories = [
   {
@@ -13,7 +13,8 @@ const stories = [
     excerpt: "A young boy meets a mysterious girl who only appears in mirrors...",
     image: "https://i.pinimg.com/originals/bf/10/a4/bf10a4a1774adb5eb8c2d43fc04133a2.jpg",
     rating: 4.5,
-    reviews: 254
+    reviews: 254,
+    content: `I was a child, I spent a lot of time alone. My parents lived in an old house way out in the countryside and there were no other children my age around. I had a little brother, but he was only a baby at the time, so I couldn't play with him. I was always a little lonely...`
   },
   {
     id: 2,
@@ -21,7 +22,8 @@ const stories = [
     excerpt: "A disturbing viral video leads to horrifying consequences...",
     image: "https://media.istockphoto.com/id/184991366/id/foto/mata-pada-sendok.jpg?s=1024x1024&w=is&k=20&c=kxdzXYB-NQcMi-wDXISJH-Y87aC29TIJalCKKvN_HcE=",
     rating: 4.1,
-    reviews: 189
+    reviews: 189,
+    content: `There are all kinds of shocking videos on the internet, showing people doing sick, disgusting and horrific things. For some reason, people watch the videos and then post their reactions on Youtube. Perhaps you've heard of some of the shock videos...`
   },
   {
     id: 3,
@@ -29,7 +31,8 @@ const stories = [
     excerpt: "A Japanese student discovers a terrifying website...",
     image: "https://w0.peakpx.com/wallpaper/1014/179/HD-wallpaper-you-re-next-grim-reaper-dog-tags-ring.jpg",
     rating: 4.3,
-    reviews: 167
+    reviews: 167,
+    content: `A 19-year old girl was attending university in Japan. In her second year of study, she decided that she wanted to improve her English, so she transferred to a university in the United States...`
   },
   {
     id: 4,
@@ -37,7 +40,8 @@ const stories = [
     excerpt: "A man's nightmare becomes an infinite cycle of horror...",
     image: "https://www.kidsgen.com/stories/horror-stories/short-stories/images/endless-loop.jpg",
     rating: 4.2,
-    reviews: 145
+    reviews: 145,
+    content: `One night, a man had a nightmare. It was the most frightening thing he had ever experienced. In the dream, he found himself walking in a desert. Somehow, he had no idea how he had gotten there, but he knew he was lost and alone...`
   },
   {
     id: 5,
@@ -45,7 +49,8 @@ const stories = [
     excerpt: "A mysterious piano holds a dark and bloody secret...",
     image: "https://static2.bigstockphoto.com/7/0/2/large1500/207986107.jpg",
     rating: 4.4,
-    reviews: 198
+    reviews: 198,
+    content: `There was a young girl named Abi who was very fond of classical music. She really wanted to learn how to play the piano and pestered her parents to pay for lessons...`
   },
   {
     id: 6,
@@ -53,7 +58,8 @@ const stories = [
     excerpt: "A night alone turns into a terrifying game of cat and mouse...",
     image: "http://thegirlwholoveshorror.blogspot.com/2011/10/movie-review-ward-2011.html",
     rating: 4.6,
-    reviews: 223
+    reviews: 223,
+    content: `It is night. Darkness welcomes you warmly. You are alone in your house. The rest of your family had gone out of town to attend a wedding...`
   }
 ];
 
