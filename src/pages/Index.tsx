@@ -7,6 +7,7 @@ import { Mail } from "lucide-react";
 import { useState } from "react";
 import { StoriesGrid } from "@/components/StoriesGrid";
 import { stories } from "@/data/stories";
+import { AuthorInfo } from "@/components/AuthorInfo";
 
 const Index = () => {
   const [email, setEmail] = useState("");
@@ -43,6 +44,13 @@ const Index = () => {
       <section className="py-20 container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12">Featured Stories</h2>
         <StoriesGrid stories={stories} />
+      </section>
+
+      {/* Author Section */}
+      <section className="py-20 bg-muted/50">
+        <div className="container mx-auto">
+          <AuthorInfo />
+        </div>
       </section>
 
       {/* Contact Section */}
