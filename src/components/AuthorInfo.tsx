@@ -23,7 +23,8 @@ export const AuthorInfo = () => {
         <p className="text-foreground/90">
           A passionate storyteller specializing in horror and supernatural fiction. With a unique blend
           of traditional horror elements and modern psychological twists, Pakiyalakshmi creates
-          immersive narratives that keep readers on the edge of their seats.
+          immersive narratives that keep readers on the edge of their seats. Her stories draw from both personal experiences 
+          and urban legends, creating a unique blend of reality and fiction that resonates with readers worldwide.
         </p>
         <div className="flex gap-4 text-muted-foreground">
           <a href="https://github.com" className="hover:text-primary transition-colors">
