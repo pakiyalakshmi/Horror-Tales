@@ -8,9 +8,9 @@ const Story = () => {
 
   if (!story) {
     return (
-      <div className="min-h-screen bg-gray-600 py-16 px-4">
-        <div className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-          <h1>Story not found</h1>
+      <div className="min-h-screen bg-background py-16 px-4">
+        <div className="max-w-3xl mx-auto bg-card p-8 rounded-lg shadow-lg">
+          <h1 className="text-2xl font-bold mb-4 text-foreground">Story not found</h1>
           <Link to="/">
             <Button variant="outline">← Back to Stories</Button>
           </Link>
@@ -20,8 +20,8 @@ const Story = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-600 py-16 px-4">
-      <div className="max-w-3xl mx-auto bg-[rgb(228,216,216)] p-8 rounded-lg shadow-lg">
+    <div className="min-h-screen bg-background py-16 px-4">
+      <div className="max-w-3xl mx-auto bg-card p-8 rounded-lg shadow-lg">
         <Link to="/">
           <Button variant="outline" className="mb-6">
             ← Back to Stories
@@ -31,18 +31,22 @@ const Story = () => {
         <img 
           src={story.image}
           alt={story.title}
-          className="mx-auto w-2/5 rounded-lg mb-6"
+          className="mx-auto w-2/5 rounded-lg mb-8 shadow-md"
         />
         
-        <h1 className="text-center text-4xl font-bold mb-6 text-[rgb(158,92,123)]">
+        <h1 className="text-center text-4xl font-bold mb-8 text-primary">
           {story.title}
         </h1>
         
-        <hr className="border-t-2 border-gray-300 my-6" />
+        <hr className="border-t border-border my-8" />
         
-        <div className="space-y-4 text-justify text-lg leading-relaxed">
-          <p><span className="text-xl font-bold">Excerpt:</span> {story.excerpt}</p>
-          <div className="whitespace-pre-line">{story.content}</div>
+        <div className="space-y-6 text-justify leading-relaxed">
+          <p className="text-lg font-medium text-primary/90">
+            <span className="text-xl font-bold text-primary">Excerpt:</span> {story.excerpt}
+          </p>
+          <div className="whitespace-pre-line text-foreground/90 text-lg">
+            {story.content}
+          </div>
         </div>
       </div>
     </div>
