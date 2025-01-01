@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Link, useParams } from "react-router-dom";
 import { stories } from "@/data/stories";
+import { Link, useParams } from "react-router-dom";
+import { AuthorInfo } from "@/components/AuthorInfo";
 
-const Story = () => {
+export const Story = () => {
   const { id } = useParams();
-  const story = stories.find(s => s.id === Number(id));
+  const story = stories.find((s) => s.id === Number(id));
 
   if (!story) {
     return (
@@ -48,6 +49,8 @@ const Story = () => {
             {story.content}
           </div>
         </div>
+
+        <AuthorInfo />
       </div>
     </div>
   );
