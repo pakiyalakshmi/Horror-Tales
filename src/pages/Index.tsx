@@ -6,6 +6,8 @@ import { Github, Linkedin, Mail } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthorInfo } from "@/components/AuthorInfo";
+import { StoriesGrid } from "@/components/StoriesGrid";
+import { stories } from "@/data/stories";
 
 const Index = () => {
   const [email, setEmail] = useState("");
@@ -31,6 +33,12 @@ const Index = () => {
     setMessage("");
   };
 
+  // Get the 3 most recent stories
+  const recentStories = stories.slice(0, 3);
+  
+  // Get stories that are novels (in this case, we'll take stories with longer content)
+  const novelStories = stories.filter(story => story.content.length > 3000).slice(0, 3);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -44,6 +52,32 @@ const Index = () => {
               <Button size="lg" className="bg-primary hover:bg-primary/90">
                 Start Reading
               </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Newly Added Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold mb-8">Newly Added</h2>
+          <StoriesGrid stories={recentStories} />
+          <div className="text-center mt-8">
+            <Link to="/stories">
+              <Button variant="outline">View All Stories</Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Novel Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold mb-8">Novel Section</h2>
+          <StoriesGrid stories={novelStories} />
+          <div className="text-center mt-8">
+            <Link to="/stories">
+              <Button variant="outline">Explore More Novels</Button>
             </Link>
           </div>
         </div>
