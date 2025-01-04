@@ -14,10 +14,19 @@ const Index = () => {
 
   const handleContact = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Create mailto link with form data
+    const mailtoLink = `mailto:ot72013@gmail.com?subject=Feedback from Horror Stories&body=From: ${email}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
+    
+    // Open default email client
+    window.location.href = mailtoLink;
+    
+    // Show success message
     toast({
-      title: "Message sent!",
-      description: "We'll get back to you soon.",
+      title: "Email client opened!",
+      description: "Please send the email through your default email client.",
     });
+    
     setEmail("");
     setMessage("");
   };
