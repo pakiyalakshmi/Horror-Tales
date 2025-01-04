@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Github, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export const AuthorInfo = () => {
   return (
@@ -27,13 +27,26 @@ export const AuthorInfo = () => {
           and urban legends, creating a unique blend of reality and fiction that resonates with readers worldwide.
         </p>
         <div className="flex gap-4 text-muted-foreground">
-          <a href="https://github.com" className="hover:text-primary transition-colors">
+          <a 
+            href="https://github.com/pakiyalakshmi" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="hover:text-primary transition-colors"
+          >
             <Github className="w-5 h-5" />
           </a>
-          <a href="https://twitter.com" className="hover:text-primary transition-colors">
-            <Twitter className="w-5 h-5" />
+          <a 
+            href="https://www.linkedin.com/in/pakiyalakshmi-s-9647211bb/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="hover:text-primary transition-colors"
+          >
+            <Linkedin className="w-5 h-5" />
           </a>
-          <a href="mailto:author@horrorstories.com" className="hover:text-primary transition-colors">
+          <a 
+            href="mailto:ot72013@gmail.com" 
+            className="hover:text-primary transition-colors"
+          >
             <Mail className="w-5 h-5" />
           </a>
         </div>
