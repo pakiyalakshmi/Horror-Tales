@@ -1,12 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { Mail } from "lucide-react";
 import { useState } from "react";
-import { StoriesGrid } from "@/components/StoriesGrid";
-import { stories } from "@/data/stories";
+import { Link } from "react-router-dom";
 import { AuthorInfo } from "@/components/AuthorInfo";
 
 const Index = () => {
@@ -33,17 +31,13 @@ const Index = () => {
           <div className="text-white max-w-2xl">
             <h1 className="text-5xl font-bold mb-4">Read Something That Matters</h1>
             <p className="text-xl mb-8">Immerse yourself in a collection of spine-chilling horror stories that will keep you awake at night.</p>
-            <Button size="lg" className="bg-primary hover:bg-primary/90">
-              Start Reading
-            </Button>
+            <Link to="/stories">
+              <Button size="lg" className="bg-primary hover:bg-primary/90">
+                Start Reading
+              </Button>
+            </Link>
           </div>
         </div>
-      </section>
-
-      {/* Stories Section */}
-      <section className="py-20 container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12">Featured Stories</h2>
-        <StoriesGrid stories={stories} />
       </section>
 
       {/* Author Section */}
