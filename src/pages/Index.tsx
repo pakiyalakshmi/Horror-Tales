@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
-import { Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthorInfo } from "@/components/AuthorInfo";
@@ -60,6 +60,52 @@ const Index = () => {
       <section className="py-20 bg-muted">
         <div className="container mx-auto max-w-2xl">
           <h2 className="text-3xl font-bold text-center mb-12">Get in Touch</h2>
+          
+          {/* Contact Information Table */}
+          <div className="mb-12 overflow-hidden rounded-lg border bg-card">
+            <table className="w-full">
+              <tbody className="divide-y">
+                <tr className="hover:bg-muted/50 transition-colors">
+                  <td className="px-4 py-3 flex items-center">
+                    <Mail className="w-5 h-5 mr-3 text-muted-foreground" />
+                    <a 
+                      href="mailto:ot72013@gmail.com"
+                      className="text-foreground hover:text-primary transition-colors"
+                    >
+                      ot72013@gmail.com
+                    </a>
+                  </td>
+                </tr>
+                <tr className="hover:bg-muted/50 transition-colors">
+                  <td className="px-4 py-3 flex items-center">
+                    <Linkedin className="w-5 h-5 mr-3 text-muted-foreground" />
+                    <a 
+                      href="https://www.linkedin.com/in/pakiyalakshmi-s-9647211bb/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-foreground hover:text-primary transition-colors"
+                    >
+                      LinkedIn Profile
+                    </a>
+                  </td>
+                </tr>
+                <tr className="hover:bg-muted/50 transition-colors">
+                  <td className="px-4 py-3 flex items-center">
+                    <Github className="w-5 h-5 mr-3 text-muted-foreground" />
+                    <a 
+                      href="https://github.com/pakiyalakshmi"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-foreground hover:text-primary transition-colors"
+                    >
+                      GitHub Profile
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
           <form onSubmit={handleContact} className="space-y-6">
             <Input
               type="email"
